@@ -34,8 +34,10 @@ import time
 uri = 'idm-coke-ayo-9-06' #alfamart cocacola
 thread = 2
 empas = [
-"rosene.kauppi@niatniat.site|Admin123", 
-"valera.reidar@niatniat.site|Admin123", 
+"egdgdgdd@avapageacademy.me
+|admin123", 
+"elsampro@avapageacademy.me
+|admin123", 
 "beatriz.dahlia@niatniat.site|Admin123", 
 "renae.merna@niatniat.site|Admin123", 
 "briney.vacuva@niatniat.site|Admin123", 
@@ -119,7 +121,7 @@ def worker(c,ind, user):
             print("Wait redirected")
 
   driver.get('https://ayo.coca-cola.co.id/login/'+uri)
-  wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 0, 0)")]')))
+  wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 105, 55)")]')))
   try:
     driver.find_element(By.XPATH, "//*[contains(text(),'Accept all')]").click()
     print("oke")
@@ -142,12 +144,12 @@ def worker(c,ind, user):
     try:
       wait.until(EC.url_to_be('https://ayo.coca-cola.co.id/c/'+uri))
       print("udah kelogin")
-      wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 0, 0)")]//span[contains(text(),"Allow")]'))).click()
-      wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 0, 0)")][contains(text(), "Klaim")]'))).click()
+      wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 105, 55)")]//span[contains(text(),"Allow")]'))).click()
+      wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 105, 55)")][contains(text(), "Klaim")]'))).click()
 
       status = False
       try:
-        wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 0, 0)")]//span[contains(text(), "Redeem")]'))).click()
+        wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 105, 55)")]//span[contains(text(), "Redeem")]'))).click()
         try:
           driver.find_element(By.XPATH, '//p[@class="tap"][contains(text(), "Tap to expand")]').click()
           wait.until(EC.visibility_of_element_located((By.XPATH, '//div[contains(text(), " Show this barcode to the cashier")]'))).click()
@@ -155,7 +157,7 @@ def worker(c,ind, user):
         except:
           try:
             driver.find_element(By.XPATH, '//span[@class="checkmark"][1]').click()
-            wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 0, 0)")]//span[contains(text(), "Claim it")]'))).click()
+            wait.until(EC.visibility_of_element_located((By.XPATH, '//button[contains(@style,"background-color: rgb(0, 105, 55)")]//span[contains(text(), "Claim it")]'))).click()
             wait.until(EC.visibility_of_element_located((By.XPATH, '//p[@class="tap"][contains(text(), "Tap to expand")]'))).click()
             wait.until(EC.visibility_of_element_located((By.XPATH, '//div[contains(text(), " Show this barcode to the cashier")]'))).click()
             status = True
